@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import Contact from '../models/contact.js';
+
 const router = express.Router();
-const Contact = require('../models/contact');
 
 // POST: Create new contact
 router.post('/', async (req, res) => {
@@ -60,4 +61,4 @@ router.delete('/:id', async (req, res) => {
 
 );
 
-module.exports = router;
+export default router;

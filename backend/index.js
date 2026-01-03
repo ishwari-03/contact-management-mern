@@ -1,7 +1,7 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-require("dotenv").config();
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import 'dotenv/config';
 
 const app = express();
 
@@ -30,8 +30,8 @@ app.get("/", (req, res) => {
 });
 
 // Routes
-const contactRoutes = require("./routes/contactroutes");
-app.use("/api/contacts", contactRoutes);
+import contactRoutes from './routes/contactroutes.js';
+app.use('/api/contacts', contactRoutes);
 
 
 const PORT = process.env.PORT || 5000;
